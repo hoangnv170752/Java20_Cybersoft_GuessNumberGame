@@ -32,7 +32,6 @@ public class GameMethod {
         players.removeIf(player -> player.getPlayerName().equals(name)); // fix ConcurrentModificationException
     }
 
-    // check register of new player
     public static void checkRegister(String name) {
         register_name = name;
         register_state = "UNREGISTERED";
@@ -45,39 +44,33 @@ public class GameMethod {
         }
     }
 
-    // result string
     public static void checkGamePlay(int num, int x) {
         check_state = num == x ? "CORRECT" : num == guess_num ? "EXIST" : "";
         is_dialog = check_state == "" ? "false" : "true";
         guess_num = num;
     }
 
-    // result string
     public static String strAnswer(int num, int x) {
         return num > x ? BIGGER : num < x ? SMALLER : CORRECT;
     }
 
-    // reset root
     public static void mainReset() {
         register_name = "";
         register_state = "";
         is_msgBox = "false";
     }
 
-    // reset game
     public static void subReset() {
         check_state = "";
         is_dialog = "false";
         guess_num = -1;
     }
 
-    // reload and add current player to list
     public static void updateCurrentPlayer(int counter) {
         current_player.setCounter(counter);
         players.add(current_player);
     }
 
-    // sort players list by performance
     public static void playersRanking() {
         sort(players, (o1, o2) -> compare(o1.getCounter(), o2.getCounter()));
     }

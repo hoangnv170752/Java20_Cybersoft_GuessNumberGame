@@ -9,8 +9,8 @@
 
 body {
     height: 100vh;
-    background: rgb(253, 245, 109);
-    background: linear-gradient(135deg, rgba(253, 245, 109, 1) 0%, rgba(85, 226, 134, 1) 35%, rgba(95, 220, 250, 1) 100%);
+    background: rgb(1, 1, 1);
+    background: linear-gradient(135deg, rgba(222, 215, 99, 11) 50%, rgba(86, 226, 134, 1) 35%, rgba(95, 220, 250, 1) 100%);
     background-attachment: fixed;
 }
 
@@ -64,7 +64,6 @@ body {
 }
 
 @keyframes animate {
-
     0%,
     10%,
     100% {
